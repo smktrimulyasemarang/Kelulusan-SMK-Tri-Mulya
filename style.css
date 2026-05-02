@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* BODY */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ccd8dd, #2f69b4, #021f5f);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* HEADER */
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .logo {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  
+  /* CONTAINER */
+  .container {
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  /* GRID SISWA */
+  .list-siswa {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* COUNTDOWN */
+.countdown {
+  text-align: center;
+  color: white;
+  margin: 10px 0;
+  font-size: 15px;
+}
+  
+  /* CARD SISWA (PREMIUM) */
+  .siswa-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(10px);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+  
+  /* HOVER */
+  .siswa-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    background: rgba(255,255,255,0.15);
+  }
+  
+  /* KLIK */
+  .siswa-card:active {
+    transform: scale(0.97);
+  }
+  
+  /* FOTO */
+  .siswa-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    border: 2px solid rgba(255,255,255,0.3);
+  }
+  
+  /* NAMA */
+  .siswa-card p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+  }
+  
+  /* LOGIN & RESULT CARD */
+  .card {
+    max-width: 350px;
+    margin: auto;
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  /* JUDUL */
+  h2 {
+    color: white;
+    font-size: 18px;
+  }
+  
+  /* INPUT */
+  input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin: 15px 0;
+  }
+  
+  /* BUTTON */
+  button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #00c6ff;
+    color: white;
+    font-size: 15px;
+    min-height: 48px;
+  }
+  
+  button:active {
+    transform: scale(0.97);
+  }
+  
+  /* LOADING */
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255,255,255,0.2);
+    border-top: 5px solid #00c6ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-text {
+    color: white;
+    font-size: 14px;
+  }
+  
+  /* HASIL */
+  #hasil {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  /* MOBILE */
+  @media (max-width: 480px) {
+    .list-siswa {
+      grid-template-columns: 1fr;
+    }
+  
+    .siswa-card img {
+      width: 70px;
+      height: 70px;
+    }
+  
+    h2 {
+      font-size: 16px;
+    }
+  }
+  
+  /* LOADING */
+.loading-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid gray;
+  border-top: 5px solid cyan;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.footer {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+
+  background: rgba(255,255,255,0.05);
+  padding: 6px 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
